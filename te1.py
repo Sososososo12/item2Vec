@@ -14,10 +14,10 @@ def raceevent_train_data(inputfile,outputfile):
             linenum+=1
             continue
         item=line.strip().split(',')
-        user_id,frace_id=item[0],item[1]
+        user_id,prace_id=item[0],item[1]
         if user_id not in record:
             record[user_id]=[]
-        record[user_id].append(frace_id)
+        record[user_id].append(prace_id)
     fi.close
     fo=open(outputfile,'w+')
     for userid in record:
@@ -25,6 +25,6 @@ def raceevent_train_data(inputfile,outputfile):
     fo.close()
 
 if __name__=='__main__':
-    raceevent_train_data('./based_data/583userFinfo_train.txt','./based_data/combineout_userf_train.txt')
+    raceevent_train_data('./based_data/paticipant_train/user_participant.txt','./based_data/paticipant_train/combineout_userf_train.txt')
 
 

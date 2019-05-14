@@ -25,6 +25,6 @@ def raceevent_train_data(inputfile,outputfile):
     fo.close()
 
 if __name__=='__main__':
-    raceevent_train_data('./based_data/paticipant_train/user_participant.txt','./based_data/paticipant_train/combineout_userf_train.txt')
+    raceevent_train_data('./based_data/paticipant_train/user_participant.txt','./based_data/paticipant_train/combineout_userf_train2.txt')
 
 
